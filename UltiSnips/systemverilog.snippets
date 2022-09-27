@@ -32,7 +32,7 @@ endsnippet
 snippet clock "clock module"
 initial begin
     ${1:sys_clk} = 0;
-    #10 ${1:sys_clk} = ~${1:sys_clk};
+    #10 $1 = ~$1;
 end
 endsnippet
 
