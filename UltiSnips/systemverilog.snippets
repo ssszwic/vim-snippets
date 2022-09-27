@@ -28,11 +28,21 @@ initial begin
 end
 endsnippet
 
-# clock module
-snippet clock "clock module"
+# clock block
+snippet clock "clock block"
+// Clock block
 initial begin
     ${1:sys_clk} = 0;
     forever #10 $1 = ~$1;
 end
 endsnippet
 
+# reset block
+snippet reset "reset block"
+// Reset block
+initial begin
+    ${1:sys_rst_n} = 0;
+	#100
+	$1 = 1;
+end
+endsnippet
