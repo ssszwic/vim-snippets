@@ -17,6 +17,22 @@ endsnippet
 # begin-end
 snippet begin "begin-end"
 begin
-   $1 
+    $1 
 end
 endsnippet
+
+# initial block
+snippet initial "initial block"
+initial begin
+    $1
+end
+endsnippet
+
+# clock module
+snippet clock "clock module"
+initial begin
+    ${1:sys_clk} = 0;
+    #10 ${1:sys_clk} = ~${1:sys_clk};
+end
+endsnippet
+
