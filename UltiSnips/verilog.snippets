@@ -17,7 +17,7 @@ endsnippet
 # always sequ
 snippet always_ff "always sequ"
 always@(posedge sys_clk or negedge sys_rst_n) begin
-    if(~sys_rst_n) beign
+    if(~sys_rst_n) begin
         $1 
     end
 	else $2
